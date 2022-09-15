@@ -7,6 +7,6 @@ cat docker-compose.sample | sed -e 's/${APP_USERNAME}/'${APP_USERNAME}'/' | sed 
 create_network="docker network create network_"$APP_USERNAME
 echo $create_network
 $create_network
-run="docker-compose up -d"
+run="docker-compose up -d --build"
 echo $run
 $run
